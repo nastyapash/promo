@@ -1,0 +1,397 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Akrobat";
+  src: url("../fonts/akrobat-regular.woff") format("woff"), url("../fonts/akrobat-regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Corbel";
+  src: url("../fonts/сorbel.woff") format("woff"), url("../fonts/сorbel.ttf") format("truetype");
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #749c8d;
+  height: 64px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+}
+header .header-logo {
+  display: flex;
+  align-items: center;
+  height: 64px;
+}
+header .header-logo h2 {
+  margin: 0;
+  font-size: 25px;
+  font-family: Tahoma, sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+}
+header .header-logo img {
+  margin: 0 16px 6px 0;
+}
+header .header-networks {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 64px;
+}
+header .header-networks img {
+  margin-left: 12px;
+}
+
+main {
+  background: repeat url("../img/bg-img.png");
+}
+main .main-head {
+  margin-top: 64px;
+  position: relative;
+}
+main .main-head .main-head__bg {
+  width: 100%;
+}
+main .main-head .main-head__arrow {
+  position: absolute;
+  z-index: 10;
+  top: 47%;
+  right: 3%;
+}
+main .main-promo-head {
+  position: relative;
+  margin-bottom: 50px;
+}
+main .main-promo-head p {
+  position: absolute;
+  top: 27%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-family: "Akrobat", sans-serif;
+  font-size: 50px;
+  color: #004734;
+  line-height: 50px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+main .main-promo-head p span {
+  color: #de4814;
+  font-weight: bold;
+}
+main .main-item {
+  background-color: rgba(233, 236, 242, 0.7);
+  box-shadow: 0 0 15px 0 rgba(16, 17, 17, 0.4);
+  margin: 0 15px 60px;
+  padding: 20px 0 7px;
+  position: relative;
+}
+main .main-item .main-item__head {
+  padding: 0 20px;
+}
+main .main-item .main-item__head div:first-of-type {
+  padding-left: 0;
+}
+main .main-item .main-item__head div:first-of-type img {
+  width: 100%;
+}
+main .main-item .main-item__head .main-item__head-price {
+  background-color: #fff;
+  width: 100%;
+  padding-left: 25px !important;
+}
+main .main-item .main-item__head .main-item__head-price p {
+  font-size: 30px;
+  color: #575757;
+  text-decoration: line-through;
+  margin: 0;
+  line-height: 36px;
+}
+main .main-item .main-item__head .main-item__head-price p:last-of-type {
+  font-size: 37px;
+  color: #de4814;
+  text-decoration: none;
+  line-height: 40px;
+}
+main .main-item .main-item__head button {
+  width: 100%;
+  height: 43px;
+  background-color: #3ab16f;
+  border: 2px solid #3ab16f;
+  margin-top: 10px;
+  font-family: "Akrobat", sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+}
+main .main-item .main-item__head button:last-of-type {
+  background-color: #fff;
+  border: 2px solid #de4814;
+  text-transform: none;
+  font-size: 21px;
+  color: #b83b11;
+}
+main .main-item .main-item__head a {
+  display: inline-block;
+  float: right;
+  margin-top: 10px;
+  font-family: Corbel, sans-serif;
+  font-size: 17px;
+  color: #b83b11;
+  border-bottom: 1px dashed #b83b11;
+  cursor: pointer;
+}
+main .main-item .main-item__head a:hover {
+  text-decoration: none;
+}
+main .main-item .main-item__general {
+  position: relative;
+}
+main .main-item .main-item__general .modal {
+  position: absolute;
+  display: none;
+  background-color: rgba(255, 255, 255, 0.95);
+  left: 0;
+  top: -5px;
+  width: 100%;
+  height: calc(100% + 10px);
+  z-index: 10;
+  padding: 5px 20px 0;
+  overflow: visible;
+}
+main .main-item .main-item__general .modal img {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  cursor: pointer;
+}
+main .main-item .main-item__general .modal p {
+  margin-top: 35px;
+  color: #004734;
+  font-family: "Akrobat", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+}
+main .main-item .main-item__general .modal:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  right: 90px;
+  height: 20px;
+  width: 20px;
+  background-color: rgba(255, 255, 255, 0.95);
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  z-index: 10;
+}
+main .main-item .main-item__general .modal.active {
+  display: block;
+}
+main .main-item .main-item__general .main-item__about {
+  padding: 0 20px;
+}
+main .main-item .main-item__general .main-item__about h2 {
+  font-size: 27px;
+  font-family: "Akrobat", sans-serif;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 20px;
+}
+main .main-item .main-item__general .main-item__about h2 span {
+  display: inline-block;
+  font-size: 27px;
+  font-family: "Akrobat", sans-serif;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: bold;
+  border-bottom: 2px solid #000;
+  margin-bottom: 8px;
+}
+main .main-item .main-item__general .main-item__about p {
+  color: #004734;
+  font-family: "Akrobat", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+}
+main .main-item .main-item__general .main-item__networks {
+  background-color: #fff;
+  width: calc(100% - 2px);
+  padding: 10px 0;
+  margin: 5px 1px 0 1px;
+  box-sizing: border-box;
+}
+main .main-item .main-item__general .main-item__networks p {
+  font-size: 18px;
+  font-family: "Akrobat", sans-serif;
+  color: #828384;
+  text-align: center;
+}
+main .main-item .main-item__general .main-item__networks .main-item__networks-icon {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 20px;
+}
+main .main-item .main-item__sale {
+  position: absolute;
+  top: -14px;
+  right: -10px;
+}
+main .main-item .main-item__sale p {
+  position: absolute;
+  top: 18px;
+  right: 12px;
+  font-size: 26px;
+  color: white;
+}
+main .main-form {
+  background-color: #80c9b0;
+  border: 3px dotted #608f7f;
+  padding: 22px 10px;
+  margin: 20px auto 60px;
+  position: relative;
+  width: calc(100% - 30px);
+  display: block;
+}
+main .main-form form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 !important;
+}
+main .main-form input {
+  height: 43px;
+  border: 1px solid #56907c;
+  width: 30%;
+}
+main .main-form input::placeholder {
+  font-size: 20px;
+  font-family: "Akrobat", sans-serif;
+  text-align: center;
+  color: #b2b2b2;
+}
+main .main-form button {
+  background-color: #de0d08;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Akrobat", sans-serif;
+  height: 43px;
+  border: none;
+  font-weight: bold;
+  width: 36%;
+}
+main .main-form:before {
+  content: "";
+  display: block;
+  background: no-repeat url("../img/arrow-r.png");
+  position: absolute;
+  left: -120px;
+  top: 20%;
+  height: 50px;
+  width: 80px;
+}
+main .main-form:after {
+  content: "";
+  display: block;
+  background: no-repeat url("../img/arrow-l.png");
+  position: absolute;
+  right: -120px;
+  top: 20%;
+  height: 50px;
+  width: 80px;
+}
+
+footer {
+  background-color: #a4a4a5;
+  padding: 70px 0;
+  text-align: center;
+}
+footer p {
+  color: white;
+  font-size: 16px;
+  font-family: "Akrobat", sans-serif;
+}
+footer p a {
+  text-decoration: underline;
+  color: white;
+  font-family: "Akrobat", sans-serif;
+}
+footer p a:hover {
+  color: white;
+}
+
+@media (max-width: 992px) {
+  main .main-head .main-head__arrow {
+    width: 60px;
+  }
+  main .main-promo-head p {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  main .main-form input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  main .main-form button {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  main .main-head .main-head__arrow {
+    width: 50px;
+  }
+  main .main-promo-head {
+    margin-top: 35px;
+  }
+}
+@media (max-width: 620px) {
+  main .main-head .main-head__arrow {
+    width: 45px;
+  }
+  main .main-promo-head p {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 470px) {
+  header .header-logo img {
+    height: 30px;
+  }
+  header .header-logo h2 {
+    font-size: 16px;
+  }
+  header .header-networks img {
+    height: 30px;
+  }
+
+  main .main-promo-head p {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  main .main-item .main-item__head .main-item__head-price p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  main .main-item .main-item__head .main-item__head-price p:last-of-type {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  main .main-item .main-item__general .main-item__about h2 {
+    font-size: 20px;
+  }
+  main .main-item .main-item__general .main-item__about h2 span {
+    font-size: 20px;
+  }
+  main .main-item .main-item__general .main-item__networks img {
+    height: 22px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
